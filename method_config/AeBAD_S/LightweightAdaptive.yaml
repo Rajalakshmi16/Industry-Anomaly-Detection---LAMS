@@ -1,0 +1,45 @@
+RNG_SEED: 54
+
+OUTPUT_DIR: './log_LightweightAdaptive_AeBAD_S'
+
+DATASET:
+  name: 'aebad_S'
+  resize: 256
+  imagesize: 224
+  subdatasets: ["AeBAD_S"]
+  domain_shift_category: "same"
+
+TRAIN:
+  enable: True
+  save_model: True
+  method: 'LightweightAdaptive'
+  dataset_path: 'd:/VITCC/Fall 26-27/Publication work/Industrial Anomaly Detection/dataset'
+  backbone: 'resnet18'
+  lambda_entropy: 0.01
+
+  ROUTER:
+    tau: 1.0
+    bottleneck_dim: 32
+    proj_dim: 64
+
+TRAIN_SETUPS:
+  batch_size: 16
+  num_workers: 0
+  learning_rate: 0.001
+  epochs: 50
+  weight_decay: 0.0001
+  warmup_epochs: 5
+
+TEST:
+  enable: True
+  pixel_mode_verify: True
+  save_segmentation_images: False
+  save_video_segmentation_images: False
+  method: 'LightweightAdaptive'
+  dataset_path: 'd:/VITCC/Fall 26-27/Publication work/Industrial Anomaly Detection/dataset'
+
+  VISUALIZE:
+    Random_sample: False
+
+TEST_SETUPS:
+  batch_size: 16
