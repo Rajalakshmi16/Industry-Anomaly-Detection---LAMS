@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyTorch checkpoints and large logs
+*.pth
+*.pt
+log_*/
+checkpoints/
+
+# Manuscripts & Paper Drafts
+*.docx
+*.tex
+*.cls
+*.bib
+*.aux
+*.log
+*.pdf
+
+# Scratch & helper conversion scripts
+convert_to_docx.py
+generate_formatted_docx.py
+scratch_paper_prep.txt
+scratch/
+.system_generated/
+
+# Full raw datasets (if hosted externally)
+dataset/AeBAD_S/ground_truth/
+dataset/AeBAD_S/test/
+dataset/AeBAD_S/train/
+dataset/*.zip
+dataset/*.tar.gz
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
