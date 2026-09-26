@@ -76,8 +76,4 @@ Evaluates image-level AUROC and pixel-level localization across domain shifts:
 python run_lightweight_experiment.py --mode eval
 ```
 
-### D. Generate Visualization Figures
-Generates Pareto frontier, routing distribution, ROC curves, and stage-wise decomposition heatmaps:
-```bash
-python tools/generate_paper_figures.py
-```
+ 
